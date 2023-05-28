@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --text-color: #f5f5f5;
+    --bg-color: #1e1e1e;
+    ;
+    --big-font: 5rem;
+    --h2-font: 2rem;
+    --p-font: 1.25rem;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* -----the navlist css
+Text change color and zoom in effect, when mouse hovering over-----*/
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  color:  rgb(212, 169, 13);
+  margin-left: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 3px solid #f07046;
+  color: #f07046;
+  font-size: 23px;
+}
+
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 40px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+
+section {
+    padding: 0 17%;
+}
+
+
+/* custome the layout of the side icons */
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 35px;
+    color: var(--text-color);
+    transition: all .50s ease;
+}
+
+.icons i:hover {
+    /* color: #4c4c4b; */
+    color: rgb(212, 169, 13);
+    transform: translateY(-5px);
+}
+
+
+/* this is the layout of the Charts page
+==================================================*/
+.chart1 {
+    height: 100%;
+    width: 100%;
+    min-height: 75vh;
+    background: #1e1e1e;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.charts-img {
+    text-align: center;
+}
+
+.charts-img img {
+    max-width: 500px;
+}
+
+/*highlight text effect*/
+.str {
+  font-weight:700;
+  font-family:'Lato', sans-serif;
+  color: #ffffff;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+.chart1-text h2 {
+    color: #fff;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.chart1-text p {
+    font-size: var(--p-font);
+    margin: 0.8rem 0 1.2rem;
+    line-height: 1.7;
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+}
+
+
+/* footer css layout */
+footer {
+    text-align: center;
+    padding-top: 5px;
+    border-top: 1px solid #777;
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+/* this is the adaptive layout for website responsive   */
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .scroll-down {
+        right: 3%;
+        transition: .2s;
+    }
+
+}
+
+@media (max-width: 1460px) {
+    section {
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px) {
+
+    .charts-img img {
+        height: auto;
+    }
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+/* when screen siz less than 990px, the menu bar wil display */
+@media (max-width: 990px) {
+    .chart-container {
+        width: 300px;
+        height: 380px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    /* the menu will pop up if the windows size in phone screen */
+    .navlist {
+        position: absolute;
+        top: 0;
+        transform: translateY(-40vh);
+        opacity: 0;
+        transition: transform .55s ease-in, opacity .55s ease-in;
+        width: 100%;
+        left: 0;
+        background: #b9b8b84c;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        visibility: hidden;
+
+    }
+
+    .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .charts-text p {
+        display: none;
+    }
+
+    .charts-img img {
+        height: auto;
+    }
+
+    .navlist.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .charts {
+        height: 45vh;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .charts-text {
+        display: none;
+    }
+
+    .charts {
+        height: 45vh;
+    }
+
+}
+
+@media (max-width: 390px) {
+    .charts-img img {
+        width: 300px;
+    }
+}
+
+@media (max-height: 730px) {
+    .navlist {
+        transform: translateY(-50vh);
+    }
+}

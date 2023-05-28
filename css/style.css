@@ -1,0 +1,891 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*==================================================
+Declaring global CSS variables for setting the basic font size 
+and main color to the website
+==================================================*/
+:root {
+    --text-color: #f5f5f5;
+    --bg-color: #1e1e1e;
+    --big-font: 5rem;
+    --h2-font: 2rem;
+    --p-font: 1.25rem;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    color:  rgb(212, 169, 13);
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* ==================================================
+the navlist css,
+Text change color and zoom in effect, when mouse hovering over
+==================================================*/
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color:  rgb(212, 169, 13);
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 3px solid #f07046;
+    color: #f07046;
+    font-size: 23px;
+}
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 40px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.hero-text h2 {
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin: 0 0 25px 0;
+    /* margin-bottom: 10px; */
+}
+
+.hero-text p {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    line-height: 1.7;
+    /* margin-bottom: 40px; */
+    margin: 0.8rem 0 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+
+.hero-str {
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;;
+  color: #ffffff;
+  /* the highlight effect of text in he purpose & Goal paragraph
+*/
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text a {
+    display: inline-block;
+    /* color: #f5f5f5;
+    background: #1e1e1e; */
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 500;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 2px solid #e0d5cb;
+    transform: translate(8px);
+}
+
+.hero-text a.ctaa {
+    background: transparent;
+    border: 1px solid #c07f42;
+    margin-left: 20px;
+}
+
+.hero-text a.ctaa i {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* after second user test change social media at the bottom of the page*
+/* .icons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+.icons a {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.icons i {
+    display: block;
+    margin: 50px 0;
+    font-size: 35px;
+    color: var(--text-color);
+    transition: all .50s ease;
+}
+
+.icons i:hover {
+    color: rgb(212, 169, 13);
+    transform: translateY(-15px); 
+} */
+
+/* but still keep the first layout,
+keep the icons at the left side of the page */
+.icons {
+  position: absolute;
+  top: 50%;
+  padding: 0 10%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  display: block;
+  margin: 50px 0;
+  font-size: 35px;
+  color: var(--text-color);
+  transition: all .50s ease;
+}
+
+.icons i:hover {
+  color: rgb(212, 169, 13);
+  transform: scale(1.5);
+}
+
+
+/* this is the layout of the process of data cleaning section
+==================================================*/
+.about {
+    height: 100vh;
+    /* Change the height to 50% viewport height */
+    width: 100%;
+    background: var(--bg-color);
+    position: relative;
+    padding: 0;
+
+}
+
+.about-img {
+    position: relative;
+    height: 100%;
+}
+
+.about-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
+    pointer-events: none;
+}
+
+.about-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    color: #000000;
+    padding: 10%;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+}
+
+.about-text p {
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
+    font-size: var(--p-font);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ab-highlight {
+    font-weight: 50;
+    font-family: 'Lato', sans-serif;
+    color: #03071e;
+    /*Highlighting the steps of data cleaning*/
+}
+
+
+
+/* this is the layout of the orginal  data  section
+==================================================*/
+.resource {
+    height: 100vh;
+    /* Change the height to 50% viewport height */
+    width: 100%;
+    background: var(--bg-color);
+    position: relative;
+    padding: 0;
+
+}
+
+.resource-img {
+    position: relative;
+    height: 100%;
+}
+
+.resource-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
+    pointer-events: none;
+}
+
+.resource-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resource-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    color: #000000;
+    padding: 10%;
+}
+
+.resource-text h2 {
+    font-size: var(--h2-font);
+}
+
+.resource-text p {
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
+    font-size: var(--p-font);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resource-text txt-stn{
+    font-weight: 50;
+    font-family: 'Lato', sans-serif;
+    color: #03071e;
+    /*text strong in the orginial data section*/
+}
+
+
+/* ==================================================
+this is the layout of the Charts image section 
+==================================================*/
+.chart {
+    display: flex;
+}
+
+.charts {
+    width: 100%;
+    /* height: 80vh; */
+    height: 60%;
+    background: #1e1e1e;
+    position: relative;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2%;
+    text-align: center;
+}
+
+.charts-text {
+    height: 50%;
+    width: 100%;
+}
+
+.charts-img img {
+    max-width: 400px;
+}
+
+.charts-btn {
+    margin: 10px;
+}
+
+.charts-text h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+.charts-text p {
+    font-size: var(--p-font);
+    margin: 0.8rem 0 1.2rem;
+    line-height: 1.7;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.charts-img,
+.charts-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+/*-----button layout
+view chart & Learn More----*/
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  color: #1e1e1e;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  transform: scale(1.2) translateY(10px);
+  transition: .4s;
+  background-color: #d4a90d;
+}
+
+
+
+/* footer css layout */
+footer {
+    text-align: center;
+    padding-top: 5px;
+    border-top: 1px solid #777;
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+/*==================================================
+contact page css layout 
+==================================================*/
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h1 {
+    text-align: center;
+    color: #e2bf0e;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #d4a90d;
+    color: #000;
+    font-weight: blod;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f2eeee;
+    font-size: 40px;
+}
+
+.back-button:hover {
+    color: #e2bf0e;
+    /* The color will change when the mouse hover over the go back button */
+}
+
+
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .scroll-down {
+        right: 3%;
+        transition: .2s;
+    }
+
+    .about-text {
+        right: 5%;
+    }
+
+    .resource-text {
+        right: 5%;
+    }
+
+}
+
+@media (max-width: 1460px) {
+    section {
+        /* padding: 0 12%; */
+        transition: .2s;
+    }
+
+    .about-text {
+        right: 7%;
+    }
+
+    .resource-text {
+        right: 7%;
+    }
+
+    .charts-text h2 {
+        font-size: var(--h2-font);
+        color: #fff;
+    }
+
+    .charts-text p {
+        font-size: var(--p-font);
+        margin: 0.5rem 0 1.0rem;
+        line-height: 1.5;
+        color: #fff;
+    }
+}
+
+@media (max-width: 1340px) {
+
+    .hero-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5 {
+        margin-bottom: 25px;
+    }
+
+    .charts-img img {
+        height: auto;
+    }
+
+    .about-text {
+        right: 10%;
+    }
+
+    .resource-text {
+        right: 10%;
+    }
+}
+
+@media (max-width: 1292px) {
+    .charts-text h2 {
+        font-size: var(--h2-font);
+        color: #fff;
+    }
+
+    .charts-text p {
+        display: none;
+    }
+
+    .charts {
+        height: 70vh;
+    }
+
+    .charts-text {
+        padding-top: 10%;
+        height: 40%;
+        width: 100%;
+    }
+
+    .charts-img img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1195px) {
+
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 400px;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    .about-text {
+        right: 15%;
+    }
+
+    .resource-text {
+        right: 15%;
+    }
+
+}
+
+/* when screen siz less than 990px, the menu bar wil display */
+@media (max-width: 990px) {
+    .chart-container {
+        width: 300px;
+        height: 380px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    /* the menu will pop up if the windows size in phone screen */
+    .navlist {
+        position: absolute;
+        top: 0;
+        transform: translateY(-40vh);
+        opacity: 0;
+        transition: transform .55s ease-in, opacity .55s ease-in;
+        width: 100%;
+        left: 0;
+        background: #b9b8b84c;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        visibility: hidden;
+
+    }
+
+    .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .charts-text p {
+        display: none;
+    }
+
+    .charts-img img {
+        height: auto;
+    }
+
+    .navlist.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .about-text {
+        right: 20%;
+    }
+
+    .about-text p {
+        margin: 0.6rem 0 1.6rem;
+        line-height: 1.5;
+        font-size: var(--p-font);
+    }
+
+    .resource-text {
+        right: 20%;
+    }
+
+    .resource-text p {
+        margin: 0.6rem 0 1.6rem;
+        line-height: 1.5;
+        font-size: var(--p-font);
+    }
+}
+
+@media (max-width: 928px) {
+    .charts {
+        height: 60vh;
+    }
+
+    .charts-text {
+        height: 35%;
+        width: 100%;
+    }
+
+    .charts-img img {
+        max-width: 300px;
+    }
+
+    .charts-text h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 810px) {
+    .about-text {
+        right: 23%;
+    }
+
+    .about-text h2 {
+        font-size: 26px;
+    }
+
+    .about-text p {
+        margin: 0.4rem 0 1.1rem;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+
+    .resource-text {
+        right: 23%;
+    }
+
+    .resource-text h2 {
+        font-size: 26px;
+    }
+
+    .resource-text p {
+        margin: 0.4rem 0 1.1rem;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 742px) {
+    .chart {
+        display: grid;
+    }
+
+    .charts {
+        width: 100%;
+        padding: 2%;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .hero-img img {
+        width: 350px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        margin: 0.3rem 0 1.1rem;
+        line-height: 0.9;
+        font-size: 18px;
+    }
+
+    .resource-text h2 {
+        font-size: 24px;
+    }
+
+    .resource-text p {
+        margin: 0.3rem 0 1.1rem;
+        line-height: 0.9;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .about {
+        grid-template-columns: auto;
+    }
+
+
+    .charts-text {
+        display: none;
+    }
+
+    .charts-img {
+        padding: 10%;
+    }
+
+    .charts-btn {
+        margin: 0;
+    }
+
+    .charts {
+        height: 45vh;
+    }
+
+    .hero-img img {
+        width: 100%;
+    }
+
+    .about-text p {
+        display: none;
+    }
+
+    .resource-text p {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 390px) {
+
+    .charts-img {
+        padding: 5%;
+    }
+
+    .charts-btn {
+        padding: 0;
+    }
+
+    .about-text h2 {
+        font-size: 20px;
+    }
+
+    .resource-text h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .about-text h2 {
+        font-size: 20px;
+    }
+
+    .resource-text h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-height: 730px) {
+    .navlist {
+        transform: translateY(-50vh);
+    }
+}

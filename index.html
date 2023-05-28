@@ -1,0 +1,155 @@
+<!------ the basic website structure referenc from: https://youtu.be/IXucQAEkIMo 
+ reference web example from:https://youtu.be/lk99tsBF9Kw -------->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DECO3100 Website Design</title>
+
+    <!---css layout-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!---using boxicons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!---remixicons link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <!---google font link-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->   
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+    <!------------------home page -------------------->
+    <header>
+        <a href="#" class="logo">Tuna</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html">Chart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- the navigation menu at the top of the page -->
+        <div class="bx bx-menu" id="menu-icon">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Website Purpose & Goals</h2>
+            <p>1,The website is about <strong class="hero-str">showing the relationship</strong> between the production of Australia tuna
+                aquaculture and the value of import and export <strong class="hero-str">commodities value</strong>.
+                <br>
+                2, The purpose is to <strong class="hero-str">promote</strong> tuna aquaculture, improve the development of Australian <strong class="hero-str">commodity economy</strong>.
+            </p>
+        </div>
+
+        <div class="hero-img">
+            <img src="img/logo.jpeg">
+        </div>
+    </section>
+
+    <div class="icons">
+        <a href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.youtube.com/"><i class="ri-youtube-line"></i></a>
+        <a href="https://github.com/"><i class="ri-github-fill"></i></a>
+    </div>
+
+    <!------------------about page -------------------->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/qqq.jpeg">
+        </div>
+
+        <div class="about-text">
+            <h2>Process of Data Cleaning</h2>
+            <p>
+                <strong class="ab-highlight">1, Dataset evaluation:</strong> understand the structure of data, manually
+                clear missing values, data type conversion, outlier processing, etc
+                <br>
+                <strong class="ab-highlight">2, Data integration:</strong> If there are multiple data sources, it may be
+                necessary to merge them into a single data set. This can be done by associating different data sets with
+                common fields or keys.
+                <br>
+                <strong class="ab-highlight">3, Data validation: </strong>by using Google sheet to create charts to
+                validate the results of the cleaned dataset to ensure the accuracy and consistency of the data.
+            </p>
+            <a href="https://docs.google.com/spreadsheets/d/1tbYX6SrnFP6xNAKNxG57iAHPAYDt5pI5yFG3l5j9enM/edit?usp=sharing"
+                class="btn">Learn More</a>
+        </div>
+    </section>
+
+
+    <!------------------original data resource -------------------->
+    <section class="resource" id="resource">
+        <div class="resource-img">
+            <img src="img/web2.png">
+        </div>
+
+        <div class="resource-text">
+            <h2>Orginial data Source</h2>
+            <p>The orginal data resource came from the <strong class="ab-highlight">Australia Goverment</strong>
+                Fisheries and Aquaculture <strong class="ab-highlight">Statistics</strong> web, Whcih is contains
+                comprehensive information on commercial fishing and aquaculture in Australia covering fisheries
+                production, trade data and consumption statistics. </p>
+            <a href="https://www.agriculture.gov.au/abares/research-topics/fisheries/fisheries-and-aquaculture-statistics"
+                class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!------------------home page image of export chart-------------------->
+    <div class="chart">
+        <section class="charts chart2" id="chart2">
+            <div class="charts-text chart1-text">
+                <!-- <h2>Image 1</h2> -->
+                <p>After cleaning data, complete the data integration and generate this chart by using Google Sheet. Discover the tremendous
+                    value generated through Australian fisheries exports.
+                </p>
+            </div>
+            <div class="charts-img chart1-img">
+                <img src="img/Value of Australia Fisheries Products Trade.png">
+            </div>
+            <div class="charts-btn chart1-btn">
+                <a href="https://docs.google.com/spreadsheets/d/1tbYX6SrnFP6xNAKNxG57iAHPAYDt5pI5yFG3l5j9enM/edit?usp=sharing" class="btn">View Image 1</a>
+            </div>
+        </section>
+
+        <!------------------home page image of pie chart-------------------->
+        <section class="charts chart2" id="chart2">
+            <div class="charts-text chart2-text">
+                <!-- <h2>Image 2</h2> -->
+                <p>This pie chart shows the distribution of fishery species in Australia. We can see that: <strong class="txt-stn">Tuna, Salmon and
+                        Shrimp</strong>
+                    occupy a significant share of the Australian fisheries.</p>
+            </div>
+            <div class="charts-img chart2-img">
+                <img src="img/Percentage of Australia Aquaculture Production Volume .png">
+            </div>
+            <div class="charts-btn chart2-btn">
+                <a href="https://docs.google.com/spreadsheets/d/1tbYX6SrnFP6xNAKNxG57iAHPAYDt5pI5yFG3l5j9enM/edit?usp=sharing" class="btn">View Image 2</a>
+            </div>
+        </section>
+    </div>
+    <!-----------------footer-------------------->
+    <footer>
+        <p>Posted by: 1</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    </footer>
+    <!-------------extra resource for the animation, scrollreveal effect------------>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-----------------custom js link-------------------->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

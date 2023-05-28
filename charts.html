@@ -1,0 +1,95 @@
+<!-- the basic website structure referenc from: https://youtu.be/IXucQAEkIMo 
+ reference web example from:https://youtu.be/lk99tsBF9Kw -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DECO3100 Website Design</title>
+
+    <!---css layout-->
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+
+    <!---using boxicons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!---remixicons link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <!---google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+    <!------------------home page -------------------->
+    <header>
+        <a href="#" class="logo">Tuna</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html">Chart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- the navigation menu at the top of the page -->
+        <div class="bx bx-menu" id="menu-icon">
+        </div>
+    </header>
+
+
+    <!------------------plotly chart 1 -------------------->
+    <section class="charts chart1" id="chart1">
+        <div class="charts-img chart1-img">
+            <div id="Tuna_data" class="chart-container"></div>
+        </div>
+        <div class="charts-text chart1-text">
+            <h2> Interactive chart 1</h2>
+            <p>This Australia tuna trade tuna chart highlights the monetary worth of Australia's fisheries products trade.   Explore the data by <strong class="str">click the label in the chart</strong>  to get informations about the trends and dynamics shaping the fisheries industry’s....</p>
+        </div>
+    </section>
+
+    <!------------------plotly chart 2  -------------------->
+    <section class="charts chart1" id="chart1">
+        <div class="charts-img chart1-img">
+            <div id="Sec_chart">
+            </div>
+        </div>
+        <div class="charts-text chart1-text">
+            <h2>Interactive Chart 2</h2>
+            <p>From this column graph, tuna farming shows fluctuating changes. <strong class="str">Hover over</strong> on the graph to display specific values. Or <strong class="str">use the mouse to box</strong> specific years to further explore tuna production data.</p>
+        </div>
+    </section>
+
+    <!------------------plotly chart3 -------------------->
+    <section class="charts chart1" id="chart1">
+        <div class="charts-text chart1-text">
+            <h2>Interactive Chart 3</h2>
+            <p> <strong class="str">Click on the legend</strong>  to <strong class="str">tick</strong> the <strong class="str">categories</strong> to see the proportion of different fish farmed in Australia, to understand the diversity of the Australian aquaculture industry, and to reveal the importance and contribution of each type of fish farming from a different perspective.
+            </p>
+        </div>
+        <div class="charts-img chart1-img">
+            <div id="Pie_chart">
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #000; color: #fff">
+        <p>Posted by: 1</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    </footer>
+    <!-------------extra resource for the animation, scrollreveal effect------------>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-----------------custom js link-------------------->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
